@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+	<div th:fragment="movie-display(movie)" class="movie-content">
+		<div class="movie-wrapper">
+			<img th:src="${movie.poster_url}" />
+			<div class="movie-info">
+				<div>
+					<h2 th:text="${movie.title} + ' ('+${movie.year}+')'">title</h2>
+				</div>
+				<div th:text="'Director(s):'+${movie.director}">country</div>
+				<div th:text="'Actors: '+${movie.actors}">country</div>
+				<div th:text="'Rating: '+${movie.rating}">country</div>
+				<div th:text="'Description: '+${movie.description}">country</div>
+				<a th:href="${movie.movie_url}" target="_blank">Watch Trailer</a>
+			</div>
+			<div sec:authorize="hasRole('ROLE_ADMIN')" class="crud-actions">
+				<button class="btn-success edit-movie" th:data="${movie.id}" onclick="$(this).closest('.movie-wrapper').siblings('.movie-edition').show()">Edit Movie</button>
+				<button class="btn-danger delete-movie" th:data="${movie.id}" onclick="deleteMovie()">Delete Movie</button>
+			</div>
+		</div>
+		<div sec:authorize="hasRole('ROLE_ADMIN')" th:fragment="movie-form(movie)" hidden="true" class="movie-edition">
+			<div class="movie-info">
+				<form th:action="'/movies/'+${movie.id}" th:id="${movie.id}" method="PUT" class="form-group movie-form" onsubmit="editMovie()">
+					<label for="poster_url">Poster URL</label>
+					<input type="text" name="poster_url" id="poster_url" class="form-control" th:value="${movie.poster_url}" />
+					<label for="title">Title:</label>
+					<input type="text" name="title" id="title" class="form-control" th:value="${movie.title}" />
+					<label for="year">Year:</label>
+					<input type="text" name="year" id="year" class="form-control" th:value="${movie.year}" />
+					<label for="director">Director(s):</label>
+					<input type="text" name="director" id="director" class="form-control" th:value="${movie.director}" />
+					<label for="actors">Actors:</label>
+					<input type="text" name="actors" id="actors" class="form-control" th:value="${movie.actors}" />
+					<label for="rating">Rating:</label>
+					<input type="text" name="rating" id="director" class="form-control" th:value="${movie.rating}" />
+					<label for="description">Description:</label>
+					<input type="textarea" name="description" id="actors" class="form-control" th:value="${movie.description}" />
+					<label for="movie_url">Movie Content Url</label>
+					<input type="text" name="movie_url" id="movie_url" class="form-control" th:value="${movie.movie_url}" />
+					<button type="submit" class="btn-success" th:onclick="'editMovie('+${movie.id}+')'">Send</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

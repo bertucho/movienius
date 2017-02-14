@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+	<div th:fragment="moviesList" th:unless="${#lists.isEmpty(movies)}">
+		<ul id="movies">
+			<li th:each="movie : ${movies}" class="movie-row">
+				 <div th:replace="movie :: movie-display (${movie})"></div>
+			</li>
+		</ul>
+	</div>
+</body>
+</html>

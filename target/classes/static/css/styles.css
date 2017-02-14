@@ -1,0 +1,63 @@
+nav{
+    text-align: center;
+}
+
+nav a{
+    margin: 0px 20px;
+    cursor: pointer;
+}
+
+main{
+    margin: auto;
+    width: 70%;
+}
+
+ul#users {
+    list-style-type: none;
+}
+
+ul#users li{
+	border-top: 3px solid #666;
+}
+
+ul#users form{
+	padding: 10px 0px;
+	vertical-align: center;
+}
+
+.user-row{
+	padding: 10px 0px;
+	overflow: hidden;
+    text-align: center;
+	vertical-align: center;
+}
+
+li.movie-row{
+    height: auto;
+    overflow: auto;
+    margin-bottom: 20px;
+    list-style-type: none;
+}
+li img {
+    float: left;
+    margin-right: 20px;
+}
+
+.movie-info{
+    width: 53%;
+}
+
+.edit{
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.edit:hover{
+	background-color: #B6E9FA;
+	border: 1px solid #2B768F;
+}
+
+.user-form-element{
+	padding-left: 2px;
+	padding-right: 2px;
+}

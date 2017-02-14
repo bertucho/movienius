@@ -1,0 +1,17 @@
+/home/bertucho/Documents/ProyectoMovienius/movienius/src/main/java/com/movienius/controllers/MainController.java
+/home/bertucho/Documents/ProyectoMovienius/movienius/src/main/java/com/movienius/ServletInitializer.java
+/home/bertucho/Documents/ProyectoMovienius/movienius/src/main/java/com/movienius/apiclient/MovieApiClient.java
+/home/bertucho/Documents/ProyectoMovienius/movienius/src/main/java/com/movienius/configuration/SecurityConfiguration.java
+/home/bertucho/Documents/ProyectoMovienius/movienius/src/main/java/com/movienius/models/MovieDeserializer.java
+/home/bertucho/Documents/ProyectoMovienius/movienius/src/main/java/com/movienius/models/Movie.java
+/home/bertucho/Documents/ProyectoMovienius/movienius/src/main/java/com/movienius/DatabaseLoader.java
+/home/bertucho/Documents/ProyectoMovienius/movienius/src/main/java/com/movienius/models/MovieRepository.java
+/home/bertucho/Documents/ProyectoMovienius/movienius/src/main/java/com/movienius/configuration/SecurityConfig.java
+/home/bertucho/Documents/ProyectoMovienius/movienius/src/main/java/com/movienius/models/User.java
+/home/bertucho/Documents/ProyectoMovienius/movienius/src/main/java/com/movienius/controllers/Exceptions.java
+/home/bertucho/Documents/ProyectoMovienius/movienius/src/main/java/com/movienius/MovieniusApplication.java
+/home/bertucho/Documents/ProyectoMovienius/movienius/src/main/java/com/movienius/controllers/MovieController.java
+/home/bertucho/Documents/ProyectoMovienius/movienius/src/main/java/com/movienius/models/UserRepository.java
+/home/bertucho/Documents/ProyectoMovienius/movienius/src/main/java/com/movienius/CustomAuthenticationProvider.java
+/home/bertucho/Documents/ProyectoMovienius/movienius/src/main/java/com/movienius/controllers/UserController.java
+/home/bertucho/Documents/ProyectoMovienius/movienius/src/main/java/com/movienius/configuration/ThymeleafConfiguration.java
